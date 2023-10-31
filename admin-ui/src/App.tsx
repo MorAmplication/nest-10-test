@@ -9,10 +9,10 @@ import { UserList } from "./user/UserList";
 import { UserCreate } from "./user/UserCreate";
 import { UserEdit } from "./user/UserEdit";
 import { UserShow } from "./user/UserShow";
-import { TestList } from "./test/TestList";
-import { TestCreate } from "./test/TestCreate";
-import { TestEdit } from "./test/TestEdit";
-import { TestShow } from "./test/TestShow";
+import { TestEntityList } from "./testEntity/TestEntityList";
+import { TestEntityCreate } from "./testEntity/TestEntityCreate";
+import { TestEntityEdit } from "./testEntity/TestEntityEdit";
+import { TestEntityShow } from "./testEntity/TestEntityShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -32,7 +32,7 @@ const App = (): React.ReactElement => {
   return (
     <div className="App">
       <Admin
-        title={"My service"}
+        title={"My service-1"}
         dataProvider={dataProvider}
         authProvider={jwtAuthProvider}
         theme={theme}
@@ -47,11 +47,11 @@ const App = (): React.ReactElement => {
           show={UserShow}
         />
         <Resource
-          name="Test"
-          list={TestList}
-          edit={TestEdit}
-          create={TestCreate}
-          show={TestShow}
+          name="TestEntity"
+          list={TestEntityList}
+          edit={TestEntityEdit}
+          create={TestEntityCreate}
+          show={TestEntityShow}
         />
       </Admin>
     </div>
